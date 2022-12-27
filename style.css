@@ -27,25 +27,26 @@ body {
 /* ----------------- Typography ----------------- */
 
 h1 {
-  font-size: 34px;
+  font-size: 50px;
   color: #FFD25F;
   cursor: default;
 }
 
 h2 {
+  font-weight: 400;
   font-size: 24px;
-  color: #FFD25F;
+  color: #FFFFFF;
   cursor: default;
 }
 
 h3 {
-  font-weight: 400;
-  font-size: 18px;
+  font-size: 24px;
   color: #FFFFFF;
   cursor: default;
 }
 
 /* ----------------- Left Side ------------------ */
+
 .basic-info {
   padding: 50px;
 }
@@ -86,20 +87,33 @@ h3 {
   transition: 0.5s;
 }
 
-.about,
-.skills,
-.photo {
+.container {
   display: flex;
-  transition: 0.5s;
-  width: 10vw;
+  align-items: center;
+  width: 5vw;
+  padding-top: 50px;
   border-left: 2px solid #FFD25F;
-}
-
-.about h2,
-.skills h2 {
-  padding: 50px 0 0 25px;
   text-orientation: sideways-right;
   writing-mode: vertical-rl;
+  transition: 0.5s;
+}
+
+.open-page {
+  display: flex;
+  transition: 0.5s;
+  background-color: #FFD25F;
+  cursor: pointer;
+}
+
+.open-page a {
+  height: 100vh;
+  text-decoration: none;
+}
+
+.open-page h3 {
+  color: #151515;
+  cursor: pointer;
+  padding: 0 1.5vw;
 }
 
 .text {
@@ -108,26 +122,34 @@ h3 {
   padding: 50px 25px;
   width: fit-content;
   visibility: hidden;
+  text-orientation: upright;
+  writing-mode: horizontal-tb;
   opacity: 0;
+  z-index: -1;
 }
 
-.about:hover,
-.skills:hover,
-.photo:hover {
+.slider:hover {
   transition: 0.5s;
   width: 30vw;
 }
 
-.about:hover>.text {
+.slider:hover>h3 {
+  color: #FFD25F;
   transition: 0.5s;
-  visibility: visible;
-  opacity: 100%;
+  text-orientation: upright;
+  writing-mode: horizontal-tb;
 }
 
-.skills:hover>.text {
+.slider:hover>.text {
   transition: 0.5s;
   visibility: visible;
   opacity: 100%;
+  text-orientation: upright;
+  writing-mode: horizontal-tb;
+}
+
+.photo {
+  padding: 0;
 }
 
 .photo img {
@@ -135,8 +157,3 @@ h3 {
   height: 100vh;
   object-fit: cover;
 }
-
-/* .right img:hover {
-  transition: 0.5s;
-  width: 40vw;
-} */
