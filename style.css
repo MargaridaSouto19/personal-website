@@ -82,20 +82,19 @@ h3 {
 .right {
   display: flex;
   justify-content: flex-end;
-  position: relative;
   width: fit-content;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .container {
   display: flex;
   align-items: center;
-  width: 5vw;
+  width: 4vw;
   padding-top: 50px;
   border-left: 2px solid #FFD25F;
   text-orientation: sideways-right;
   writing-mode: vertical-rl;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .open-page {
@@ -117,7 +116,7 @@ h3 {
 }
 
 .text {
-  transition: 0.5s;
+  transition: 0.2s;
   color: #FFFFFF;
   padding: 50px 25px;
   width: fit-content;
@@ -128,20 +127,24 @@ h3 {
   z-index: -1;
 }
 
+.slider {
+  z-index: 0;
+}
+
 .slider:hover {
-  transition: 0.5s;
+  transition: 0.2s;
   width: 30vw;
 }
 
 .slider:hover>h3 {
   color: #FFD25F;
-  transition: 0.5s;
+  transition: 0.2s;
   text-orientation: upright;
   writing-mode: horizontal-tb;
 }
 
 .slider:hover>.text {
-  transition: 0.5s;
+  transition: 0.2s;
   visibility: visible;
   opacity: 100%;
   text-orientation: upright;
@@ -156,4 +159,76 @@ h3 {
   width: 100%;
   height: 100vh;
   object-fit: cover;
+}
+
+
+/* ------------------------------ RESPONSIVIDADE  ------------------------------  */
+
+@media screen and (max-width: 800px) {
+  body {
+    display: block;
+    overflow: auto;
+  }
+
+  .left,
+  .right {
+    width: 100vw;
+  }
+
+  .left {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .links {
+    position: initial;
+    align-items: flex-end;
+  }
+
+  .right {
+    height: fit-content;
+    display: block;
+  }
+
+  .container {
+    display: block;
+    width: 100%;
+    height: 5vh;
+    padding: 10px 0;
+    border-bottom: 2px solid #FFD25F;
+    border-left: none;
+    text-orientation: upright;
+    writing-mode: horizontal-tb;
+  }
+
+  .container h3 {
+    color: #FFD25F;
+    padding: 10px 50px;
+  }
+
+  .open-page h3 {
+    color: #151515;
+    padding-top: 0;
+  }
+
+  .slider {
+    pointer-events: none;
+    width: 100vw;
+    height: fit-content;
+  }
+
+  .text {
+    opacity: 100%;
+    visibility: visible;
+    padding: 20px 50px;
+    height: fit-content;
+  }
+
+  .photo {
+    padding: 0;
+  }
+
+  .photo img {
+    height: 50vh;
+  }
 }
