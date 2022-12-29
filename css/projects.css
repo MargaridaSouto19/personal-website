@@ -41,6 +41,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   width: 4vw;
   padding-top: 50px;
@@ -51,6 +52,7 @@ body {
 }
 
 .type {
+  z-index: 1;
   display: flex;
   transition: 0.5s;
   background-color: #FFD25F;
@@ -83,7 +85,24 @@ body {
   width: fit-content;
   text-orientation: upright;
   writing-mode: horizontal-tb;
-  width: 30vw;
+  width: 25vw;
+}
+
+.text-info p {
+  padding-bottom: 25px;
+}
+
+.text-info a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #FFD25F;
+  transition: 0.2s;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.text-info a:hover {
+  transition: 0.2s;
+  border-bottom: 2px solid #FFD25F;
 }
 
 .slider {
@@ -110,8 +129,4 @@ body {
   color: #FFD25F;
   text-orientation: upright;
   writing-mode: horizontal-tb;
-}
-
-img {
-  display: none;
 }
