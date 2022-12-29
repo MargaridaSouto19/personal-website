@@ -1,48 +1,12 @@
-* {
-  padding: 0;
-  margin: 0;
-  font-family: 'Roboto Mono', monospace;
-}
-
-::selection {
-  background: #FFD25F;
-  color: #151515;
-}
-
 body {
-  width: 100vw;
-  display: flex;
   justify-content: space-between;
-  background-color: #151515;
   overflow: hidden;
-  position: relative;
 }
 
 .left,
 .right {
   width: fit-content;
   height: 100vh;
-}
-
-/* ----------------- Typography ----------------- */
-
-h1 {
-  font-size: 50px;
-  color: #FFD25F;
-  cursor: default;
-}
-
-h2 {
-  font-weight: 400;
-  font-size: 24px;
-  color: #FFFFFF;
-  cursor: default;
-}
-
-h3 {
-  font-size: 24px;
-  color: #FFFFFF;
-  cursor: default;
 }
 
 /* ----------------- Left Side ------------------ */
@@ -83,7 +47,7 @@ h3 {
   display: flex;
   justify-content: flex-end;
   width: fit-content;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 
 .container {
@@ -94,7 +58,7 @@ h3 {
   border-left: 2px solid #FFD25F;
   text-orientation: sideways-right;
   writing-mode: vertical-rl;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 
 .open-page {
@@ -116,7 +80,7 @@ h3 {
 }
 
 .text {
-  transition: 0.2s;
+  transition: 0.5s;
   color: #FFFFFF;
   padding: 50px 25px;
   width: fit-content;
@@ -132,19 +96,19 @@ h3 {
 }
 
 .slider:hover {
-  transition: 0.2s;
+  transition: 0.5s;
   width: 30vw;
 }
 
 .slider:hover>h3 {
   color: #FFD25F;
-  transition: 0.2s;
+  transition: 0.5s;
   text-orientation: upright;
   writing-mode: horizontal-tb;
 }
 
 .slider:hover>.text {
-  transition: 0.2s;
+  transition: 0.5s;
   visibility: visible;
   opacity: 100%;
   text-orientation: upright;
@@ -203,8 +167,10 @@ h3 {
 
   .container h3 {
     color: #FFD25F;
-    padding: 10px 50px;
+    text-align: center;
+    padding: 10px;
   }
+
 
   .open-page h3 {
     color: #151515;
@@ -220,15 +186,17 @@ h3 {
   .text {
     opacity: 100%;
     visibility: visible;
-    padding: 20px 50px;
+    padding: 20px 25px;
     height: fit-content;
   }
 
   .photo {
     padding: 0;
+    height: 50vh;
   }
 
   .photo img {
-    height: 50vh;
+    height: 100%;
+    object-fit: cover;
   }
 }

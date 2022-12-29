@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+::selection {
+  background: #FFD25F;
+  color: #151515;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  background-color: #151515;
+  position: relative;
+}
+
+/* ----------------- Typography ----------------- */
+
+h1 {
+  font-size: 50px;
+  color: #FFD25F;
+  cursor: default;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #FFFFFF;
+  cursor: default;
+}
+
+h3 {
+  font-size: 24px;
+  color: #FFFFFF;
+  cursor: default;
+}
