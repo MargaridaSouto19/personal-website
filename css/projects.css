@@ -105,6 +105,10 @@ body {
   border-bottom: 2px solid #FFD25F;
 }
 
+span {
+  font-weight: 700;
+}
+
 .slider {
   z-index: 0;
 }
@@ -129,4 +133,62 @@ body {
   color: #FFD25F;
   text-orientation: upright;
   writing-mode: horizontal-tb;
+}
+
+/* ------------------------------ RESPONSIVIDADE  ------------------------------  */
+
+
+@media screen and (max-width: 800px) {
+  body {
+    display: block;
+    overflow: auto;
+  }
+
+  .left,
+  .right {
+    height: fit-content;
+    display: block;
+  }
+
+
+  .container {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    padding: 10px 0;
+    border-bottom: 2px solid #FFD25F;
+    border-left: none;
+    text-orientation: upright;
+    writing-mode: horizontal-tb;
+  }
+
+  .container h3 {
+    color: #FFD25F;
+    text-align: center;
+    padding: 10px;
+  }
+
+
+  .type h3 {
+    color: #151515;
+    padding-top: 0;
+  }
+
+  .slider {
+    pointer-events: none;
+    width: 100vw;
+    height: fit-content;
+  }
+
+  .hidden-info {
+    opacity: 100%;
+    visibility: visible;
+    padding: 20px 25px;
+    height: fit-content;
+  }
+
+  .text-info {
+    width: fit-content;
+  }
+
 }
